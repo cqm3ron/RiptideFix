@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "riptide_fix",
+  "version": "${version}",
+  "name": "Riptide Fix",
+  "description": "Fixes Riptide with Depth Strider",
+  "license": "MIT",
+  "authors": [
+    "Ricky12Awesome"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/riptide-fix",
+    "sources": "https://github.com/Ricky12Awesome/RiptideFix",
+    "issues": "https://github.com/Ricky12Awesome/RiptideFix/issues"
+  },
+  "icon": "assets/riptide_fix/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.github.ricky12awesome.riptidefix.fabric.RiptideFixClient"
+    ]
+  },
+  "mixins": [
+    "riptide_fix.mixins.json"
+  ],
+  "depends": {
+    "minecraft": "1.18.x",
+    "fabricloader": ">=0.12.0"
+  },
+  "recommends": {
+    "fabric": "*"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
+  }
+}

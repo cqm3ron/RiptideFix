@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "com.github.ricky12awesome.riptidefix.forge.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "riptide_fix_forge.refmap.json",
+  "client": [
+    "TridentFixMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
