@@ -21,6 +21,21 @@ dependencies {
 }
 
 tasks {
+  remapJar {
+    val jar = jar.get();
+
+    archiveBaseName.set(jar.archiveBaseName)
+    archiveAppendix.set(jar.archiveAppendix)
+    archiveVersion.set(jar.archiveVersion)
+    archiveClassifier.set("fabric")
+
+    destinationDirectory.set(jar.destinationDirectory)
+  }
+
+  jar {
+    archiveClassifier.set("fabric-dev")
+  }
+
   withType<ProcessResources> {
     filteringCharset = "UTF-8"
 

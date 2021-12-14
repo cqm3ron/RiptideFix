@@ -1,3 +1,5 @@
+@file:Suppress("PropertyName")
+
 val minecraft_version: String by rootProject.extra
 val forge_version: String by rootProject.extra
 val forge_mappings: String by rootProject.extra
@@ -6,11 +8,6 @@ val forge_mixin: String by rootProject.extra
 plugins {
   id("net.minecraftforge.gradle") version "5.1.26"
   id("org.spongepowered.mixin") version "0.7-SNAPSHOT"
-}
-
-java {
-  setProperty("archivesBaseName", "riptide_fix")
-  toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 }
 
 minecraft {
@@ -47,16 +44,10 @@ dependencies {
 }
 
 tasks.jar {
+  archiveClassifier.set("forge")
+
   manifest {
-    attributes(
-      "Specification-Title" to "riptide_fix",
-      "Specification-Vendor" to "Ricky12Awesome",
-      "Specification-Version" to "1", // We are version 1 of ourselves
-      "Implementation-Title" to rootProject.name,
-      "Implementation-Version" to rootProject.version,
-      "Implementation-Vendor" to "Ricky12Awesome",
-      "MixinConfigs" to "riptide_fix_forge.mixins.json",
-    )
+    attributes("MixinConfigs" to "riptide_fix_forge.mixins.json")
   }
 
   finalizedBy("reobfJar")
