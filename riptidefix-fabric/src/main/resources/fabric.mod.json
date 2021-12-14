@@ -21,7 +21,7 @@
     ]
   },
   "mixins": [
-    "riptide_fix.mixins.json"
+    "riptide_fix_fabric.mixins.json"
   ],
   "depends": {
     "minecraft": "1.18.x",
