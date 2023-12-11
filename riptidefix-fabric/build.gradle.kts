@@ -7,7 +7,7 @@ val fabric_api: String by rootProject.extra
 val modmenu: String by rootProject.extra
 
 plugins {
-  id("fabric-loom") version "0.10-SNAPSHOT"
+  id("fabric-loom") version "1.4-SNAPSHOT"
 }
 
 dependencies {
